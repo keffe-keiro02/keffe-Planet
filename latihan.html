@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyframes</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        
+        body{
+            min-height: 100vh;
+        }
+
+        @keyframes rotateEarth {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes rotateMoon {
+            0% {
+                transform: translate(150px);
+            }
+            100% {
+                transform: translate(150px);
+            }
+        }
+        
+        .box{
+            position: relative;
+            height: 150px;
+            width: 150px;
+            background-image: url(assets/pngtree-hand-drawn-cartoon-earth-png-elements-png-image_4148504.png);
+            background-position: center center;
+            top: 200px;
+            left: 610px;
+            animation: rotateEarth 5s infinite linear;
+            border-radius: 50%;
+        }
+
+        .circle{
+            position: absolute;
+            height: 80px;
+            width: 80px;
+            background-image: url(assets/bulan.jpeg);
+            background-position: center center;
+            border-radius: 50%;
+            animation: rotateMoon 3s infinite linear;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="circle"></div>
+    </div>
+</body>
+</html>
